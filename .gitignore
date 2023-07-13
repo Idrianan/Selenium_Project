@@ -1,6 +1,4 @@
-Scripts/
-Lib/
-Include/
+Selenium_Project/
 pyvenv.cfg
 __pycache__/
 .pytest_cache/
