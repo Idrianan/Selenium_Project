@@ -22,3 +22,11 @@ class ProductPage(BasePage):
     def item_is_in_basket(self):
         assert self.find_product_name()==self.find_basket_name(), f'Invalid product name in busket. \nShould be {self.find_product_name()} but got {self.find_basket_name()}'
         assert self.find_product_price()==self.find_basket_price() , f'Invalid product price in busket. \nShould be {self.find_product_price()} but got {self.find_basket_price()}'
+    
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.BASKET_NAME), \
+        "Success message is presented, but should not be"
+
+    def should_be_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.BASKET_NAME), \
+        "Success message isn't disappeared but it should be"
