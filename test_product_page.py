@@ -4,7 +4,6 @@ from .pages.basket_page import BasketPage
 import time
 import pytest
 
-@pytest.mark.login_user
 class TestUserAddToBasketFromProductPage:
 
     @pytest.fixture(scope="function", autouse=True)
